@@ -1,4 +1,3 @@
-
 export default async function AuthStatus() {
   const session = await getServerSession();
   return (

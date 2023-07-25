@@ -5,7 +5,7 @@ export default function SignOut() {
   return (
     <button
       className="link text-primary-content transition-all"
-      onClick={() => signOut({callbackUrl: '/'})}
+      onClick={() => signOut({ callbackUrl: "/" })}
     >
       Sign out
     </button>

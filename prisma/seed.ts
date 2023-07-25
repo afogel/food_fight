@@ -1,24 +1,23 @@
-import prisma from '@/lib/prisma';
+import prisma from "@/lib/prisma";
 import { hash } from "bcrypt";
-
 
 async function main() {
   const user = await prisma.user.upsert({
-    where: { email: 'user@user.com' },
+    where: { email: "user@user.com" },
     update: {},
     create: {
-      email: 'user@user.com',
-      password: await hash('password', 10)
-    }
-  })
+      email: "user@user.com",
+      password: await hash("password", 10),
+    },
+  });
   const user2 = await prisma.user.upsert({
-    where: { email: 'admin@user.com' },
+    where: { email: "admin@user.com" },
     update: {},
     create: {
-      email: 'admin@user.com',
-      password: await hash('password', 10)
-    }
-  })
+      email: "admin@user.com",
+      password: await hash("password", 10),
+    },
+  });
 }
 
 main()

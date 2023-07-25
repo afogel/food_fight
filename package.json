@@ -10,6 +10,8 @@
     "seed": "ts-node -P tsconfig-seed.json -r tsconfig-paths/register --transpileOnly prisma/seed.ts"
   },
   "dependencies": {
+    "@headlessui/react": "0.0.0-insiders.1739edb",
+    "@heroicons/react": "^2.0.18",
     "@prisma/client": "^4.14.0",
     "@types/node": "^18.11.9",
     "@types/react": "^18.0.25",
